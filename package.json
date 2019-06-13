@@ -1,0 +1,56 @@
+{
+  "name": "print-my-dir",
+  "description": "A simple way to print your directory structure",
+  "version": "0.0.1",
+  "author": "Rogerio Angeliski @angeliski",
+  "bin": {
+    "print-my-dir": "./bin/run"
+  },
+  "bugs": "https://github.com/angeliski/print-my-dir/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "@oclif/test": "^1.2.4",
+    "dir-tree-creator": "^4.0.0",
+    "ora": "^3.4.0",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@oclif/test": "^1",
+    "@oclif/tslint": "^3",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "chai": "^4",
+    "mocha": "^5",
+    "nyc": "^13",
+    "ts-node": "^8",
+    "tslint": "^5",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/angeliski/print-my-dir",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "print-my-dir"
+  },
+  "repository": "angeliski/print-my-dir",
+  "scripts": {
+    "posttest": "tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc -b",
+    "pretest": "tslint --fix -p . -t stylish ",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\""
+  },
+  "types": "lib/index.d.ts"
+}
