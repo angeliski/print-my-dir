@@ -23,6 +23,7 @@
     "@types/mocha": "^5",
     "@types/node": "^10",
     "chai": "^4",
+    "coveralls": "^3.0.4",
     "mocha": "^5",
     "nyc": "^13",
     "ts-node": "^8",
@@ -50,7 +51,8 @@
     "posttest": "tslint -p . -t stylish",
     "prepack": "rm -rf lib && tsc -b",
     "pretest": "tslint --fix -p . -t stylish ",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\""
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "types": "lib/index.d.ts"
 }
