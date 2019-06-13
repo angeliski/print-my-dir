@@ -2,7 +2,7 @@ import {expect, test} from '@oclif/test'
 
 import cmd = require('../src')
 
-describe('print-my-dir2', () => {
+describe('print-my-dir', () => {
   test
     .stdout()
     .do(async () => await cmd.run(['./test/dir']))
